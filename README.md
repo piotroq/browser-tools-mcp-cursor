@@ -13,6 +13,7 @@ Check out our project roadmap here: [Github Roadmap / Project Board](https://git
 ## Updates
 
 v1.2.0 is out! Here's a quick breakdown of the update:
+
 - You can now enable "Allow Auto-Paste into Cursor" within the DevTools panel. Screenshots will be automatically pasted into Cursor (just make sure to focus/click into the Agent input field in Cursor, otherwise it won't work!)
 - Integrated a suite of SEO, performance, accessibility, and best practice analysis tools via Lighthouse
 - Implemented a NextJS specific prompt used to improve SEO for a NextJS application
@@ -27,14 +28,16 @@ v1.2.0 is out! Here's a quick breakdown of the update:
 There are three components to run this MCP tool:
 
 1. Install our chrome extension from here: [v1.2.0 BrowserToolsMCP Chrome Extension](https://github.com/AgentDeskAI/browser-tools-mcp/releases/download/v1.2.0/BrowserTools-1.2.0-extension.zip)
-2. Install the MCP server from this command within your IDE: `npx @agentdeskai/browser-tools-mcp@latest`
-3. Open a new terminal and run this command: `npx @agentdeskai/browser-tools-server@latest`
 
+2. Install the MCP server from this command within your IDE: `npx @agentdeskai/browser-tools-mcp@latest`
+
+3. Open a new terminal and run this command: `npx @agentdeskai/browser-tools-server@latest`
 * Different IDEs have different configs but this command is generally a good starting point; please reference your IDEs docs for the proper config setup
 
 IMPORTANT TIP - there are two servers you need to install. There's...
+
 - browser-tools-server (local nodejs server that's a middleware for gathering logs)
-and
+  and
 - browser-tools-mcp (MCP server that you install into your IDE that communicates w/ the extension + browser-tools-server)
 
 `npx @agentdeskai/browser-tools-mcp@latest` is what you put into your IDE
@@ -43,6 +46,7 @@ and
 After those three steps, open up your chrome dev tools and then the BrowserToolsMCP panel.
 
 If you're still having issues try these steps:
+
 - Quit / close down your browser. Not just the window but all of Chrome itself. 
 - Restart the local node server (browser-tools-server)
 - Make sure you only have ONE instance of chrome dev tools panel open
@@ -105,7 +109,7 @@ The MCP server provides tools to run audits on the current page. Here are exampl
 Ensures the page meets accessibility standards like WCAG.
 
 > **Example Queries:**
->
+> 
 > - "Are there any accessibility issues on this page?"
 > - "Run an accessibility audit."
 > - "Check if this page meets WCAG standards."
@@ -115,7 +119,7 @@ Ensures the page meets accessibility standards like WCAG.
 Identifies performance bottlenecks and loading issues.
 
 > **Example Queries:**
->
+> 
 > - "Why is this page loading so slowly?"
 > - "Check the performance of this page."
 > - "Run a performance audit."
@@ -125,7 +129,7 @@ Identifies performance bottlenecks and loading issues.
 Evaluates how well the page is optimized for search engines.
 
 > **Example Queries:**
->
+> 
 > - "How can I improve SEO for this page?"
 > - "Run an SEO audit."
 > - "Check SEO on this page."
@@ -135,7 +139,7 @@ Evaluates how well the page is optimized for search engines.
 Checks for general best practices in web development.
 
 > **Example Queries:**
->
+> 
 > - "Run a best practices audit."
 > - "Check best practices on this page."
 > - "Are there any best practices issues on this page?"
@@ -145,7 +149,7 @@ Checks for general best practices in web development.
 Runs all audits in a particular sequence. Will run a NextJS audit if the framework is detected.
 
 > **Example Queries:**
->
+> 
 > - "Run audit mode."
 > - "Enter audit mode."
 
@@ -154,7 +158,7 @@ Runs all audits in a particular sequence. Will run a NextJS audit if the framewo
 Checks for best practices and SEO improvements for NextJS applications
 
 > **Example Queries:**
->
+> 
 > - "Run a NextJS audit."
 > - "Run a NextJS audit, I'm using app router."
 > - "Run a NextJS audit, I'm using page router."
@@ -164,7 +168,7 @@ Checks for best practices and SEO improvements for NextJS applications
 Runs all debugging tools in a particular sequence
 
 > **Example Queries:**
->
+> 
 > - "Enter debugger mode."
 
 ## Architecture
